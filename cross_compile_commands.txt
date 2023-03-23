@@ -1,0 +1,5 @@
+cmake -GNinja -DCMAKE_BUILD_TYPE=Release -DQT_FEATURE_eglfs_egldevice=ON -DQT_FEATURE_eglfs_gbm=ON -DQT_BUILD_TOOLS_WHEN_CROSSCOMPILING=ON  -DQT_BUILD_EXAMPLES=OFF -DQT_BUILD_TESTS=OFF -DQT_HOST_PATH=/usr/lib/x86_64-linux-gnu/qt6 -DCMAKE_STAGING_PREFIX=/home/thegyi/projects/qt-cross/crosswin_staging -DCMAKE_INSTALL_PREFIX=/home/thegyi/projects/qt-cross/qt6crosswin -DCMAKE_PREFIX_PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt6HostInfo -DCMAKE_TOOLCHAIN_FILE=/home/thegyi/projects/qt-cross/mingw-w64-x86_64.cmake -DQt6HostInfo_DIR=/usr/lib/x86_64-linux-gnu/cmake/Qt6HostInfo /home/thegyi/projects/qt-cross/qtbase-everywhere-src-6.3.0/
+
+cmake --build . --parallel 4
+
+cmake --install .
